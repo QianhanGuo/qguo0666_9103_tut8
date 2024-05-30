@@ -78,6 +78,7 @@ function draw() {
   }
 
   // Draw the large circles with concentric circles inside them
+  // Using Perlin noise to make 4 big circles move irregularly
 
   // The big circle in the upper left corner
   drawBigCircleWithCircles(minNumber * 0.30 + noise(frameCount * 0.01) * 100 - 50, minNumber * 0.25 + noise(frameCount * 0.01) * 100 - 50, minNumber * 0.55, ['#FFFFFF', '#4E9E48', '#FFFFFF', '#4E9E48', '#FFFFFF', '#4E9E48', '#FFFFFF', '#4E9E48', '#D449AC', '#F55060', '#000000', '#199B34', '#FFFFFF']);
