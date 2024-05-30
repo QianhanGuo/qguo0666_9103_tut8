@@ -47,25 +47,24 @@ function draw() {
   for (let i = 0; i < balls.length; i++) {
     let ball = balls[i];
 
-    // Applying Perlin noise on x to move it to the right
+    // Applying Perlin noise on x to move it irregularly
     let noiseX = noise(ball.xOffset);
-    let noiseScaleX = 2; // Noise scaling factor, affecting the movement speed of the ball
-    let dx = map(noiseX, 0, 1, 1, 2) * noiseScaleX;
+    let noiseScaleX = 0.5; // Noise scaling factor, affecting the movement speed of the ball
+    let dx = map(noiseX, 0, 1, -2, 2) * noiseScaleX;
     ball.x += dx;
 
-    // Applying Perlin noise on y to make it move irregularly up and down
+    // Applying Perlin noise on y to move it upwards
     let noiseY = noise(ball.yOffset);
-    let noiseScaleY = 0.5; // Noise scaling factor, affecting the movement speed of the ball
-    let dy = map(noiseY, 0, 1, -1, 1) * noiseScaleY;
+    let noiseScaleY = 2; // Noise scaling factor, affecting the movement speed of the ball
+    let dy = map(noiseY, 0, 1, -2, -1) * noiseScaleY;
     ball.y += dy;
 
-    // If the ball touches the right side of the canvas, move it to the left side of the canvas
-    if (ball.x > width + minNumber * 0.02) {
-      ball.x = -minNumber * 0.02;
+    // If the ball goes above the canvas, move it to the bottom of the canvas
+    if (ball.y < -minNumber * 0.02) {
+      ball.y = height + minNumber * 0.02;
     }
 
-    // Restrict balls movement within the canvas
-    ball.y = constrain(ball.y, minNumber * 0.02, height - minNumber * 0.02);
+    
 
     // draw the balls
     fill(ball.color);
