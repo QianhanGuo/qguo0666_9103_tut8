@@ -1,5 +1,7 @@
 # qguo0666_9103_tut8
 I am student Qianhan Guo.
+The artwork chosen by our group is: Pacita Abad 'Wheels of Fortune'.
+![An image of Pacita Abad 'Wheels of fortune'](readmeimages/Pacita_Abad_Wheels_of_fortune.jpg)
 
 # Creative coding major project
 
