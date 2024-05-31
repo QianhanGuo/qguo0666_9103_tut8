@@ -1,5 +1,7 @@
 # qguo0666_9103_tut8
 I am student Qianhan Guo.
+Our group's code is located in the folder "Group code (not individual code)".
+My personal code is in the folder "assignment".
 The artwork chosen by our group is: Pacita Abad 'Wheels of Fortune'.
 ![An image of Pacita Abad 'Wheels of fortune'](readmeimages/Pacita_Abad_Wheels_of_fortune.jpg)
 
